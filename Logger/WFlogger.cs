@@ -23,6 +23,7 @@ namespace Guardian.WF.Logger
             _service = service;
              ReplaceEnterpriceLibraryConfig();
 
+
         }
 
         void ReplaceEnterpriceLibraryConfig()

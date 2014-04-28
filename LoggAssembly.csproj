@@ -41,6 +41,14 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\lior\Guardian Projects\State Comptroller Menta\CRM\Guardian.Menta\SharedDLL\Cache\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\lior\Guardian Projects\State Comptroller Menta\CRM\Guardian.Menta\SharedDLL\Cache\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+    </Reference>
     <Reference Include="microsoft.crm.sdk.proxy">
       <HintPath>..\SharedDLL\CRM\microsoft.crm.sdk.proxy.dll</HintPath>
     </Reference>
@@ -82,6 +90,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +98,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\CacheCrmManager.cs" />
+    <Compile Include="Config\ConfigCaching.cs" />
+    <Compile Include="Config\Configuration.cs" />
+    <Compile Include="Config\Factory.cs" />
+    <Compile Include="Config\SerializeObject.cs" />
+    <Compile Include="Contract\DataCacheServer.cs" />
+    <Compile Include="Contract\ICache.cs" />
+    <Compile Include="Contract\ICacheItem.cs" />
+    <Compile Include="Contract\ICacheProvider.cs" />
+    <Compile Include="Contract\IConfigurationCache.cs" />
     <Compile Include="Logger\ConfigCrm.cs" />
     <Compile Include="Logger\Configuration\DesignResources.Designer.cs" />
     <Compile Include="Logger\WFlogger.cs" />
@@ -99,10 +118,17 @@
   <ItemGroup>
     <None Include="key.snk" />
   </ItemGroup>
-  <ItemGroup>
+  <!--ItemGroup>
     <EmbeddedResource Include="Logger\Configuration\DesignResources.resx" />
-  </ItemGroup>
+  </ItemGroup-->
   <ItemGroup>
+    <Content Include="shareddll\Guardian.Menta.Cache.dll" />
+    <Content Include="shareddll\Guardian.Menta.Cache.pdb" />
+    <Content Include="shareddll\Guardian.Menta.Cache.XML" />
+    <Content Include="shareddll\Microsoft.ApplicationServer.Caching.Client.dll" />
+    <Content Include="shareddll\Microsoft.ApplicationServer.Caching.Client.xml" />
+    <Content Include="shareddll\Microsoft.ApplicationServer.Caching.Core.dll" />
+    <Content Include="shareddll\Microsoft.ApplicationServer.Caching.Core.xml" />
     <Content Include="shareddll\microsoft.crm.sdk.proxy.dll" />
     <Content Include="shareddll\microsoft.crm.sdk.proxy.xml" />
     <Content Include="shareddll\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
@@ -113,12 +139,15 @@
     <Content Include="shareddll\Microsoft.Practices.Unity.Configuration.dll" />
     <Content Include="shareddll\Microsoft.Practices.Unity.dll" />
     <Content Include="shareddll\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="shareddll\Microsoft.WindowsFabric.Common.dll" />
+    <Content Include="shareddll\Microsoft.WindowsFabric.Data.Common.dll" />
     <Content Include="shareddll\microsoft.xrm.client.dll" />
     <Content Include="shareddll\microsoft.xrm.client.xml" />
     <Content Include="shareddll\microsoft.xrm.sdk.dll" />
     <Content Include="shareddll\microsoft.xrm.sdk.workflow.dll" />
     <Content Include="shareddll\microsoft.xrm.sdk.workflow.xml" />
     <Content Include="shareddll\microsoft.xrm.sdk.xml" />
+    <None Include="webResource\new_configuration.json" />
     <Content Include="webResource\webresource.xml" />
   </ItemGroup>
   <ItemGroup />

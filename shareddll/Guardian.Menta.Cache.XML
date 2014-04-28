@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Guardian.Menta.Cache</name>
+    </assembly>
+    <members>
+        <member name="M:Guardian.Menta.Cache.CacheCrmManager.GetCacheItem``1(System.String,System.String)">
+            <summary>
+            Get only Cache Item
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="key"></param>
+            <param name="cacheName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Guardian.Menta.Cache.CacheCrmManager.GetItem``1(System.String,System.Func{``0},System.TimeSpan,System.String)">
+            <summary>
+            Get data from Cahce if not exsist add one
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="key"></param>
+            <param name="setCache"></param>
+            <param name="expiredTime"></param>
+            <param name="cacheName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Guardian.Menta.Cache.CacheCrmManager.SetItem``1(System.String,System.Func{``0},System.TimeSpan,System.String)">
+            <summary>
+            Set only To Cache item
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="key"></param>
+            <param name="setCache"></param>
+            <param name="expiredTime"></param>
+            <param name="cacheName"></param>
+        </member>
+        <member name="M:Guardian.Menta.Cache.CacheCrmManager.SerializeToXml``1(``0)">
+            <summary>
+            Another option Serialize it's prefer then binary option because diffrent type objects
+            (in ilmerge problem the types is the some but assembly are not) can not be Deserialize 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Guardian.Menta.Cache.CacheCrmManager.JsonSerializeObject``1(``0)">
+             <summary>
+            Preffer option Serialize over XML option because is light way string option on memory
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="obj"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Guardian.Menta.Cache.CacheCrmManager.SerializeToBinary``1(``0)">
+            <summary>
+            Bad option because has problem with ilMerge that's has some types but diffrent assembly    
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

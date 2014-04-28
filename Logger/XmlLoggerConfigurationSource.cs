@@ -16,8 +16,6 @@ using System.Xml.Linq;
 namespace Guardian.WF.Logger
 {
 
-   
-
     public class XmlLoggerConfigurationSource : IConfigurationSource
     {
         private string _xml;
@@ -73,8 +71,4 @@ namespace Guardian.WF.Logger
             
         }
     }
-
-  
-
-
 }

@@ -1,0 +1,7 @@
+{
+"ConfigCaching" :
+{
+"DataCacheServers":[
+{ "__type":"DataCacheServer:#Guardian.Menta.Common.Configuration.JSON","Host":"crm11mantad.gdevdom.goffice.local","Port":22233 }
+]
+}
